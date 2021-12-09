@@ -17,6 +17,6 @@ jobs:
       - name: Change mode of file
         run: |
           chmod +x some_code.sh
-      - name: Run bashsript
+      - name: Run bashsript in git
         run: |
           ./some_code.sh
