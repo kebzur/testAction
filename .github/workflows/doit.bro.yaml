@@ -13,4 +13,10 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          ls 
+          ls
+      - name: Change mode of file
+        run: |
+          chmod +x some_code.sh
+      - name: Run bashsript
+        run: |
+          ./some_code.sh
