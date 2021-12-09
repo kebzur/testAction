@@ -2,7 +2,7 @@ name: GitHub Actions Demo
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    if: ${{ github.ref == 'refs/heads/kebzur-patch-2' }}
+    if: ${{ github.ref == 'refs/heads/feature_branch_test' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -16,3 +16,6 @@ jobs:
         run: |
          id
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Run script
+        run: |
+          ./some_code.sh
