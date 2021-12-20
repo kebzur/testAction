@@ -1,0 +1,22 @@
+ebc4fb7 added another file logs
+5ef55f5 added logs files
+98ffacb Merge branch 'main' of github.com:kebzur/testAction test squash
+6d6df04 Added logs to see
+ba173f3 My new awesome commit to show to Sanzhar
+bc6654f Update test.yaml
+eaa41ca Update test.yaml
+4ee31e9 Update test.yaml
+a947fd8 Update test.yaml
+361205f Create test.yaml
+7bb6b40 Delete .github/workflows directory
+d62c3e4 teest
+a9fbd89 test again
+c4a2117 add new job
+8c6419b add branch to run
+d2ac6fc Merge pull request #2 from kebzur/kebzur-patch-2
+16bf0b9 Create new.yaml
+085cc86 Update github-actions-demo.yml
+3d18353 Update github-actions-demo.yml
+df4c057 Merge pull request #1 from kebzur/kebzur-patch-1
+3aa2247 Create github-actions-demo.yml
+f11d06a Initial commit
