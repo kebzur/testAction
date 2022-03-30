@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v1/batch
 kind: ConfigMap
 metadata:
   name: aws-auth
