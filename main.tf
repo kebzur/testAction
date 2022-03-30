@@ -21,8 +21,8 @@ KUSTOMIZATION
 resource "local_file" "foo" {
   content  = local.kustomization
   filename = "kustomization.yaml"
-  provisioner "local-exec" {
-    command     = " git config --global user.email m.proud78.com && git config --global user.name kebzur && git add . && git commit -m 'pushed from terraform' && git push origin -u main -f"
-    interpreter = []
-  }
+  # provisioner "local-exec" {
+  #   command     = " git config --global user.email m.proud78.com && git config --global user.name kebzur && git add . && git commit -m 'pushed from terraform' && git push origin -u main -f"
+  #   interpreter = []
+  # }
 }
