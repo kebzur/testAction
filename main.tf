@@ -23,5 +23,6 @@ resource "local_file" "foo" {
   filename = "kustomization.yaml"
   provisioner "local-exec" {
     command = "git add . && git commit -m 'pushed from terraform' && git push origin -u main  && rm ./kustomization.yaml"
+    interpreter = []
   }
 }
