@@ -94,7 +94,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Pushes test file
-      uses: kebzur/testAction/kustomization.yaml
+      uses: kebzur/testAction/kustomization.yaml@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
