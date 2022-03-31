@@ -97,6 +97,8 @@ jobs:
         cat $file > kustomization.yaml
         git config --global user.name kebzur
         git config --global user.email m.proud78@gmail.com
+        git status
         git add -A 
         git commit -m "pushed from githubActions"
-        git push origin main -f
+        git fetch origin main
+        git push origin HEAD:main
