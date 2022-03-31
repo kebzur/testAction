@@ -95,8 +95,10 @@ jobs:
       run: file=$(find /home/runner/work/_temp/ -type f -name kustomization.yaml)
     - name: copy that
       run: cat $file > kustomization.yaml
-    # - name: switching from HTTPS to SSH
-    #   run: git remote set-url origin ${{ secrets.ssh }}
+    - name: gitconfig mail
+      run: git config --global user.email "m.proud78@gmail.com"
+    - name: gitconfig name
+      run: git config --global user.email "kebzur"
     - name: check for changes
       run: git status
     - name: stage changed files
