@@ -99,4 +99,4 @@ jobs:
         git config --global user.email m.proud78@gmail.com
         git add -A 
         git commit -m "pushed from githubActions"
-        git push
+        git push origin main -f
