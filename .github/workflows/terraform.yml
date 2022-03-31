@@ -95,6 +95,7 @@ jobs:
       run: |
         file=$(find /home/runner/work/_temp/ -type f -name kustomization.yaml)
         cat $file > ./kustomization.yaml
+        echo $file
         # git config --global user.name kebzur
         # git config --global user.email m.proud78@gmail.com
         # git status
