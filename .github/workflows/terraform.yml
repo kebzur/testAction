@@ -95,14 +95,14 @@ jobs:
       run: file=$(find /home/runner/work/_temp/ -type f -name kustomization.yaml)
     - name: copy that
       run: cat $file > kustomization.yaml
-    - name: gitconfig mail
-      run: git config --global user.email "m.proud78@gmail.com"
-    - name: gitconfig name
-      run: git config --global user.email "kebzur"
     - name: check for changes
       run: git status
     - name: stage changed files
       run: git add .
+    - name: gitconfig mail
+      run: git config --global user.email "m.proud78@gmail.com"
+    - name: gitconfig name
+      run: git config --global user.email "kebzur"
     - name: commit changed files
       run: git commit -m "pushed from githubActions"
     - name: fetch from master
