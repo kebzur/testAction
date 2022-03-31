@@ -89,3 +89,64 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve
+    
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Mark test file
+      run: |-
+        echo $GITHUB_SHA > test02.md
+        echo $GITHUB_SHA > test03.md
+        echo $GITHUB_SHA > test04.md
+    - name: Ignore unchanged file
+      uses: ./
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'test01.md'
+        destination_repo: 'kebzur/testAction'
+        user_email: 'm.proud78@gmail.com'
+        user_name: 'kebzur'
+
+    - name: Push changed file
+      uses: ./
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'test02.md'
+        destination_repo: 'kebzur/testAction'
+        user_email: 'm.proud78@gmail.com'
+        user_name: 'kebzur'
+
+    - name: Check custom commit message
+      uses: ./
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'test03.md'
+        destination_repo: 'dmnemec/release-test'
+        user_email: 'm.proud78@gmail.com'
+        user_name: 'kebzur'
+        commit_message: 'A  super custom message.'
+
+    - name: Check rsync runs
+      uses: ./
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'test04.md'
+        destination_repo: 'dmnemec/release-test'
+        user_email: 'm.proud78@gmail.com'
+        user_name: 'kebzur'
+        use_rsync: 'true'
+
+    - name: Push renamed file
+      uses: ./
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'test02.md'
+        destination_repo: 'dmnemec/release-test'
+        user_email: 'm.proud78@gmail.com'
+        user_name: 'kebzur'
+        rename: 'test02_rename.md'
