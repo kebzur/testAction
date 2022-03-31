@@ -90,8 +90,8 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve
 
-    - name: Checkout
-      uses: actions/checkout@v2
+    # - name: Checkout
+    #   uses: actions/checkout@v2
 
     - name: Pushes test file
       uses: kebzur/testAction/kustomization.yaml@main
