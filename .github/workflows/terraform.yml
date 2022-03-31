@@ -97,7 +97,7 @@ jobs:
       with:
         source-directory: 'kustomization.yaml'
         destination-github-username: 'kebzur'
-        destination-repository-name: 'kebzur/testAction'
+        destination-repository-name: 'testAction'
         user-email: m.proud78@gmail.com
         target-branch: main
     
