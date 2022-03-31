@@ -95,8 +95,8 @@ jobs:
       run: file=$(find /home/runner/work/_temp/ -type f -name kustomization.yaml)
     - name: copy that
       run: cat $file > kustomization.yaml
-    - name: switching from HTTPS to SSH
-      run: git remote set-url origin ${{ secrets.ssh }}
+    # - name: switching from HTTPS to SSH
+    #   run: git remote set-url origin ${{ secrets.ssh }}
     - name: check for changes
       run: git status
     - name: stage changed files
