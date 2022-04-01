@@ -34,4 +34,7 @@ jobs:
           author_name: imamajonov
           author_email: m.prod78@gmail.com
           message: 'Commit from github actions Terraform'
-          add: 'kustomization.yaml'
+          add: |
+            "kustomization.yaml" 
+            "./insiderdocs/insiderdocs-kustomization.yaml"
+            "./es-snapshot/es-napshot-kustomization.yaml"
