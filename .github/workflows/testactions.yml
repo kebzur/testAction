@@ -1,0 +1,22 @@
+name: Commit Date
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create report file
+        run: date +%s > report.txt
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v8
+        with:
+          author_name: imamajonov
+          author_email: m.prod78@gmail.com
+          message: 'Commit from github actions'
+          add: 'report.txt'
