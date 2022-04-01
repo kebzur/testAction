@@ -62,7 +62,7 @@ data:
 KUSTOMIZATION
 }
 
-resource "local_file" "es-napshot" {
+resource "local_file" "insiderdocs" {
   content  = local.insiderdocs
   filename = "./insiderdocs/insiderdocs-kustomization.yaml"
 }
